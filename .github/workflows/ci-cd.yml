@@ -41,7 +41,8 @@ jobs:
 
       # Step 3: Run the new Docker container using the pulled image with all necessary environment variables
       - name: Run Docker Container
-        run: docker run -d -p 5173:80 \
-          --name reactjs-app-container \
-          -e VITE_FIREBASE_API_KEY=${{ secrets.VITE_FIREBASE_API_KEY }} \
-          shafique471/react_aws  # The image to run
+        run:  docker run -d -p 5173:80 \
+              --name reactjs-app-container \
+              -e VITE_FIREBASE_API_KEY=${{ secrets.VITE_FIREBASE_API_KEY }} \
+              shafique471/react_aws:latest  # Ensure the image name is lowercase and correct
+
