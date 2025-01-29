@@ -44,5 +44,5 @@ jobs:
         run:  docker run -d -p 5173:80 \
               --name reactjs-app-container \
               -e VITE_FIREBASE_API_KEY=${{ secrets.VITE_FIREBASE_API_KEY }} \
-              shafique471/react_aws:latest  # Ensure the image name is lowercase and correct
+              shafique471/react_aws:latest
 
